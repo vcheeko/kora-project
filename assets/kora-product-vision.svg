@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">KORA Product Vision</title>
+  <desc id="desc">Three conceptual product states showing goal capture, project status and governed approval with verification.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0f1e"/>
+      <stop offset="1" stop-color="#111a31"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6de4ff"/>
+      <stop offset="1" stop-color="#8d80ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="900" rx="28" fill="url(#bg)"/>
+  <text x="90" y="88" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="46" font-weight="700" fill="#f7f9ff">KORA Product Vision</text>
+  <text x="90" y="134" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" fill="#aab6d3">A simple conversational surface over project state, authority and verified execution.</text>
+
+  <g font-family="Inter,Segoe UI,Arial,sans-serif" filter="url(#shadow)">
+    <!-- Panel 1 -->
+    <rect x="80" y="205" width="440" height="535" rx="28" fill="#151f36" stroke="#2c3b5d"/>
+    <rect x="80" y="205" width="440" height="62" rx="28" fill="#1b2947"/>
+    <circle cx="112" cy="236" r="7" fill="#6de4ff"/>
+    <text x="138" y="243" font-size="18" font-weight="700" fill="#ffffff">KORA</text>
+    <text x="114" y="318" font-size="15" font-weight="700" fill="#7084ab">YOUR GOAL</text>
+    <rect x="114" y="344" width="372" height="115" rx="18" fill="#10182a" stroke="#314468"/>
+    <text x="140" y="382" font-size="19" fill="#eef3ff">“Prepare the project for</text>
+    <text x="140" y="413" font-size="19" fill="#eef3ff">an investor review today.”</text>
+    <rect x="114" y="492" width="165" height="48" rx="15" fill="url(#hero)"/>
+    <text x="197" y="523" text-anchor="middle" font-size="16" font-weight="700" fill="#0b1020">Continue</text>
+    <text x="114" y="595" font-size="15" font-weight="700" fill="#7084ab">KORA UNDERSTANDS</text>
+    <text x="114" y="630" font-size="18" fill="#dce6fb">Goal · current state · urgency</text>
+    <text x="114" y="660" font-size="18" fill="#dce6fb">scope · allowed next steps</text>
+
+    <!-- Panel 2 -->
+    <rect x="580" y="205" width="440" height="535" rx="28" fill="#151f36" stroke="#2c3b5d"/>
+    <rect x="580" y="205" width="440" height="62" rx="28" fill="#1b2947"/>
+    <circle cx="612" cy="236" r="7" fill="#8d80ff"/>
+    <text x="638" y="243" font-size="18" font-weight="700" fill="#ffffff">Project status</text>
+    <text x="614" y="318" font-size="15" font-weight="700" fill="#7084ab">NOW</text>
+    <rect x="614" y="344" width="372" height="78" rx="18" fill="#10182a" stroke="#314468"/>
+    <text x="640" y="377" font-size="17" font-weight="700" fill="#7ee7ff">PUBLIC REVIEW READY</text>
+    <text x="640" y="401" font-size="15" fill="#aab6d3">2 safe improvements identified</text>
+    <text x="614" y="470" font-size="15" font-weight="700" fill="#7084ab">NEXT VALID ACTION</text>
+    <rect x="614" y="492" width="372" height="112" rx="18" fill="#182640" stroke="#4b6e9d"/>
+    <text x="640" y="529" font-size="18" font-weight="700" fill="#ffffff">Add public UX visual</text>
+    <text x="640" y="557" font-size="16" fill="#b9c5dc">Low-risk · reversible · public only</text>
+    <text x="640" y="580" font-size="16" fill="#b9c5dc">No private implementation exposed</text>
+    <text x="614" y="660" font-size="15" fill="#7f90b2">Blocked work stays out of the action list.</text>
+
+    <!-- Panel 3 -->
+    <rect x="1080" y="205" width="440" height="535" rx="28" fill="#151f36" stroke="#2c3b5d"/>
+    <rect x="1080" y="205" width="440" height="62" rx="28" fill="#1b2947"/>
+    <circle cx="1112" cy="236" r="7" fill="#6de4ff"/>
+    <text x="1138" y="243" font-size="18" font-weight="700" fill="#ffffff">Verified action</text>
+    <text x="1114" y="318" font-size="15" font-weight="700" fill="#7084ab">OUTCOME</text>
+    <rect x="1114" y="344" width="372" height="104" rx="18" fill="#102a2d" stroke="#2d7978"/>
+    <text x="1140" y="381" font-size="18" font-weight="700" fill="#83f2d3">✓ Updated successfully</text>
+    <text x="1140" y="412" font-size="16" fill="#c4ddd8">Evidence captured · state updated</text>
+    <text x="1114" y="502" font-size="15" font-weight="700" fill="#7084ab">WHAT HAPPENS NEXT</text>
+    <rect x="1114" y="526" width="372" height="106" rx="18" fill="#10182a" stroke="#314468"/>
+    <text x="1140" y="563" font-size="18" font-weight="700" fill="#ffffff">Continue when useful</text>
+    <text x="1140" y="592" font-size="16" fill="#b9c5dc">KORA preserves the project state</text>
+    <text x="1140" y="615" font-size="16" fill="#b9c5dc">so work can resume reliably later.</text>
+  </g>
+
+  <text x="800" y="815" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="22" fill="#e8eefc">The UX stays simple; governance depth scales behind the scenes with risk and consequence.</text>
+  <text x="1500" y="858" text-anchor="end" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" fill="#657390">Concept mockup · not a production UI</text>
+</svg>
