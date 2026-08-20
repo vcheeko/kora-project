@@ -72,6 +72,12 @@ Verification / evidence
 State update + next valid action
 ```
 
+### Product at a glance
+
+![How KORA Works](assets/kora-how-it-works.svg)
+
+This is intentionally a **public concept view**: it explains the product logic without exposing private implementation, exact approval boundaries or security-sensitive details.
+
 A more detailed, deliberately non-sensitive view is in **[High-Level Architecture](docs/ARCHITECTURE.md)**.
 
 ## What KORA is not
@@ -98,6 +104,12 @@ GOAL → PLAN → AUTHORIZED ACTION → EXECUTION → VERIFICATION → PERSISTEN
 ```
 
 The first meaningful milestone is not “more architecture.” It is a small end-to-end core used on a real project with measurable outcomes.
+
+### Product experience concept
+
+![KORA Product Vision](assets/kora-product-vision.svg)
+
+The intended experience is deliberately simple: **state the goal, see the current project state and next valid action, approve only when needed, and receive a verified outcome that can be continued later.** Governance depth should scale behind the scenes with risk and consequence rather than becoming permanent user-facing friction.
 
 ## Public / private boundary
 
