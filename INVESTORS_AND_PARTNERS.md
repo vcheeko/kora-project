@@ -2,65 +2,159 @@
 
 ## One sentence
 
-KORA is exploring a **human-directed operating layer for AI work**: natural-language control on top, persistent project state and risk-aware orchestration underneath, with verification before consequential changes are trusted.
+KORA is building toward a **human-directed operating layer for reliable AI-assisted work**: natural-language control on top, persistent project state and risk-aware orchestration underneath, with verification before consequential outcomes are trusted.
 
-## Problem
+## The problem
 
-Powerful AI tools are increasingly capable of acting across repositories, applications and business workflows, but users still carry much of the coordination burden:
+AI tools can already perform increasingly useful work, but multi-step projects still leave the user coordinating much of the system manually:
 
-- remembering project context;
-- deciding which agent/tool should act;
+- reconstructing context;
+- deciding what should happen next;
+- choosing tools or agents;
 - managing dependencies;
-- checking permissions and risk;
-- verifying outputs;
-- recovering after failures;
-- continuing reliably across sessions.
+- controlling permissions and risk;
+- checking whether execution really succeeded;
+- recovering from failures;
+- preventing concurrent work from creating conflicting state.
 
-This creates a gap between **AI capability** and **reliable AI operations**.
+The KORA thesis is that **AI capability alone is not enough; reliable AI operations need an operating layer around that capability.**
 
-## KORA hypothesis
+## Product hypothesis
 
-A useful AI operating layer should combine:
+KORA should make it possible for a user to express intent in normal language while the system handles the operational layer:
 
-1. simple natural-language interaction;
-2. durable project state;
-3. task/dependency awareness;
-4. risk-proportional authority;
-5. tool/agent orchestration;
-6. verification, receipts and recovery.
+```text
+intent
+→ project state
+→ plan / dependencies
+→ risk / authority
+→ tool or agent execution
+→ verification
+→ persistent continuation
+```
 
-## Stage
+The human keeps authority over goals, scope and consequential approvals.
 
-**Pre-seed / prototype-stage.** Private engineering work has explored governance, controlled execution, verification, transaction semantics and a local execution bridge. The next target is a minimal end-to-end core and a real-project pilot.
+## What exists today
 
-There is **no claim of production readiness or validated product-market fit yet**.
+KORA is **pre-seed / prototype-stage**.
+
+Private development has already implemented or substantially exercised:
+
+- governance and human-authority concepts;
+- controlled execution and fail-closed workflows;
+- verification / review / evidence patterns;
+- transaction-style execution semantics;
+- natural-language continuation concepts;
+- safe-parallelism rules;
+- a bounded local execution bridge prototype exercised through staged local testing.
+
+The public repository contains the project thesis, high-level architecture, milestone status and collaboration/diligence material while intentionally excluding private implementation and sensitive evidence.
+
+There is **no claim of production readiness or validated product-market fit**.
+
+## Why this may matter
+
+The project is not betting that one specific model wins. The underlying hypothesis is that as model and tool capability improves, users and teams will still need a reliable way to manage:
+
+- state;
+- authority;
+- dependencies;
+- delegation;
+- verification;
+- recovery;
+- continuation.
+
+If that hypothesis is correct, KORA's value would sit **between human intent and changing model/tool capabilities**.
+
+This is a hypothesis to validate, not a moat claim.
+
+## Immediate milestone
+
+The next target is a **minimal KORA Core**, not a broad platform.
+
+It should prove one end-to-end loop:
+
+```text
+GOAL
+→ PLAN
+→ AUTHORIZED ACTION
+→ EXECUTION
+→ VERIFICATION
+→ RECEIPT
+→ PERSISTENT STATE
+→ CONTINUE LATER
+```
+
+Then KORA should be tested on a real project against a simpler baseline: an AI assistant plus manual tool management.
+
+## What the pilot should measure
+
+- task completion rate;
+- human coordination burden;
+- number of unnecessary approvals/questions;
+- failure detection;
+- recovery quality;
+- verification quality;
+- context reconstruction avoided;
+- time saved;
+- new failure modes introduced by KORA itself.
 
 ## Founder profile
 
-Miha Tavčar is a systems/product-oriented founder based in Ljubljana. His strengths are product vision, structured problem decomposition, AI-assisted prototyping, governance/workflow design, testing and multilingual communication. He is intentionally seeking stronger software-engineering leadership rather than presenting himself as a senior engineer.
+**Miha Tavčar — Ljubljana, Slovenia**
+
+Miha is a systems/product-oriented founder. His strengths are product vision, structured problem decomposition, workflow/governance design, AI-assisted prototyping, testing and multilingual communication.
+
+He is deliberately **not positioning himself as a senior software engineer**. A central near-term objective is to add strong technical leadership that can simplify, challenge and implement the system rigorously.
 
 ## What we are looking for now
 
-### Technical
-A strong technical co-founder / lead engineer and a small number of specialist collaborators.
+### Technical co-founder / lead engineer
 
-### Partners / mentors
-People experienced in agentic AI, workflow infrastructure, developer tools, security/reliability, enterprise AI adoption or early-stage product validation.
+Highest priority. Strong backend/systems judgment, durable state, workflow engines, agent/tool execution, testing, observability and security thinking are especially relevant.
+
+### Specialist collaborators
+
+AI/agent engineering, reliability/security, evaluation and product/UX.
+
+### Pilot partners and mentors
+
+People or teams with a real multi-step workflow where reliability, handoffs, repeated context and tool coordination are painful enough to measure.
 
 ### Capital
-We are interested in conversations with **pre-seed investors and accelerators**, but the immediate objective is not to maximize a funding round. The objective is to assemble the right technical team, build the minimal core and obtain evidence from a real pilot.
 
-## What early capital would fund
+We are open to **pre-seed investors and accelerators**, but the near-term goal is evidence, not fundraising theater.
 
-- technical co-founder / engineering capacity;
+Early capital would primarily fund:
+
+- technical leadership and engineering capacity;
 - minimal KORA Core implementation;
-- secure execution/sandbox infrastructure;
+- secure execution / sandbox work;
 - evaluation and test harnesses;
 - pilot integrations;
-- product UX and early user research.
+- product UX and user research.
 
-## Suggested first diligence question
+## What we are not asking an investor to believe yet
 
-**Can KORA demonstrate a materially more reliable and lower-friction project workflow than using an AI assistant plus manual tool management?**
+We are not asking anyone to assume:
 
-That is the central hypothesis the next milestone should test.
+- production readiness;
+- product-market fit;
+- enterprise security certification;
+- a proven moat;
+- general autonomous execution.
+
+The appropriate diligence question today is narrower:
+
+> **Can KORA demonstrate a materially more reliable and lower-friction project workflow than using an AI assistant plus manual tool management?**
+
+That is the evidence the next phase should produce.
+
+## Public diligence links
+
+- [Project Status & Roadmap](docs/STATUS_AND_ROADMAP.md)
+- [High-Level Architecture](docs/ARCHITECTURE.md)
+- [Design Principles](docs/DESIGN_PRINCIPLES.md)
+- [FAQ](docs/FAQ.md)
+- [Collaborate](COLLABORATE.md)

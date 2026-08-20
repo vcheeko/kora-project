@@ -1,60 +1,148 @@
 # KORA
 
-**A human-directed operating layer for reliable AI-assisted work.**
+> **A human-directed operating layer for reliable AI-assisted work.**
 
-KORA is an early-stage project exploring how a person can work with AI through natural language while the system handles project state, task dependencies, risk, tools/agents, verification and evidence behind the scenes.
+**Status:** pre-product / prototype-stage  
+**Public repository:** project overview, architecture, status, collaboration and diligence surface  
+**Private development:** implementation, internal governance evidence and security-sensitive details remain private
 
-The goal is simple to describe:
+KORA explores a simple idea: **a person should be able to state a goal in normal language while the system keeps the work organized, chooses the next valid action, coordinates tools or AI agents, verifies important outcomes and preserves enough project state to continue reliably later.**
 
-> The human states the goal. KORA keeps the work organized, chooses the next safe action, coordinates tools or agents, verifies outcomes, and preserves enough state to continue reliably later.
+## The problem
 
-## Why this exists
+AI systems are becoming more capable, but serious multi-step work still leaves the user carrying much of the operational burden:
 
-Today, advanced AI workflows often require the user to manually manage prompts, agent roles, repositories, context, approvals and recovery. KORA is being designed to reduce that operational burden without removing human authority.
+- remembering project context across sessions;
+- deciding which tool or agent should act next;
+- tracking dependencies and blocked work;
+- deciding when human approval is required;
+- checking whether an action actually succeeded;
+- recovering safely after failures;
+- preventing parallel work from corrupting canonical state.
 
-## Core principles
+KORA is an attempt to close the gap between **AI capability** and **reliable AI operations** without removing human authority.
 
-- **Human-directed:** the human owns goals, scope and consequential approvals.
-- **Intent-first UX:** natural language should replace memorized command syntax wherever possible.
-- **Risk-proportional governance:** low-risk work stays lightweight; consequential work receives stronger checks.
-- **Persistent project state:** the system should know what is done, active, blocked and next.
-- **Verification before trust:** important changes should produce evidence, not just confident text.
-- **Safe autonomy:** agents/tools may act independently only inside defined authority and recovery boundaries.
-- **Private implementation, public collaboration layer:** sensitive implementation and governance evidence remain private while this repository explains the project and collaboration opportunities.
+## The KORA hypothesis
+
+A useful operating layer for AI-assisted work should combine:
+
+1. **Natural-language control** — intent first, not memorized commands.
+2. **Persistent project state** — done, active, blocked, next and why.
+3. **Task and dependency awareness** — work happens in a valid order.
+4. **Risk-proportional authority** — lightweight for low-risk work, stronger checks for consequential work.
+5. **Tool and agent orchestration** — route work to the right capability.
+6. **Verification before trust** — important outcomes produce evidence, not only confident text.
+7. **Recovery-aware execution** — reversible work, checkpoints and explicit failure handling.
+8. **Human authority** — goals, scope and consequential approvals remain human-directed.
+
+## What exists today
+
+KORA is **not a finished autonomous assistant**. It is an early systems project moving from governance/prototyping toward an executable core.
+
+Work already implemented or substantially exercised in private development includes:
+
+- a versioned governance and human-authority model;
+- controlled execution and fail-closed workflow concepts;
+- review, verification and evidence workflows;
+- transaction-style request → authorization → execution → verification → state-update semantics;
+- natural-language continuation concepts;
+- safe-parallelism rules for independent, reversible work;
+- a **bounded local execution bridge prototype** that has been implemented and exercised through staged local testing;
+- public architecture, status and collaboration documentation.
+
+These are **prototype/research engineering results**, not claims of production readiness.
+
+For the current milestone state, see **[Project Status & Roadmap](docs/STATUS_AND_ROADMAP.md)**.
 
 ## High-level flow
 
 ```text
 Human goal
    ↓
-KORA intent + project state
+Intent + persistent project state
    ↓
-Plan / dependencies / risk
+Plan + dependencies + risk/authority
    ↓
-Tool & agent orchestration
+Tool / agent orchestration
    ↓
 Execution
    ↓
 Verification / evidence
    ↓
-Persistent state + next action
+State update + next valid action
 ```
 
-## Current stage
+A more detailed, deliberately non-sensitive view is in **[High-Level Architecture](docs/ARCHITECTURE.md)**.
 
-KORA is **pre-product / prototype-stage infrastructure work**, not a finished autonomous assistant. Private development has focused on governance rules, controlled execution, verification, transaction semantics and a local bridge concept. The next major milestone is a small end-to-end KORA Core that can manage a real project loop with persistent state.
+## What KORA is not
 
-See [Project Status & Roadmap](docs/STATUS_AND_ROADMAP.md).
+KORA is not currently:
 
-## We are looking for
+- a foundation model;
+- a replacement for human decision-making;
+- a production-ready autonomous agent platform;
+- a claim that every AI action should be automated;
+- an open publication of the private implementation or security model;
+- a validated product-market-fit claim.
 
-- a **technical co-founder / lead engineer** who enjoys AI systems, orchestration and product architecture;
-- **AI/backend engineers** interested in agent workflows, persistent state, tool execution and evaluation;
-- **security / reliability collaborators** interested in sandboxing, permissions, recovery and auditability;
-- **product/UX collaborators** interested in making powerful AI systems usable through simple natural-language interaction;
-- **early partners, mentors and investors** who understand pre-seed AI infrastructure / productivity systems.
+The near-term question is narrower and testable:
 
-See [Collaborate](COLLABORATE.md) and [Investor / Partner Brief](INVESTORS_AND_PARTNERS.md).
+> **Can KORA make a real multi-step AI-assisted project materially more reliable and lower-friction than an assistant plus manual tool management?**
+
+## Current focus
+
+The next major target is a **minimal KORA Core** that can demonstrate one complete loop:
+
+```text
+GOAL → PLAN → AUTHORIZED ACTION → EXECUTION → VERIFICATION → PERSISTENT CONTINUATION
+```
+
+The first meaningful milestone is not “more architecture.” It is a small end-to-end core used on a real project with measurable outcomes.
+
+## Public / private boundary
+
+This repository is intentionally the **public collaboration and diligence surface**, not the canonical private engineering repository.
+
+Public here:
+
+- project thesis and problem definition;
+- high-level architecture;
+- current stage and roadmap;
+- collaboration needs;
+- investor / partner brief;
+- contribution and security guidance.
+
+Private by design:
+
+- canonical governance rule registers;
+- internal execution scripts and implementation details;
+- exact approval/security boundaries;
+- credentials and machine-specific configuration;
+- detailed evidence chains, hashes and operational artifacts;
+- unpublished IP-sensitive material.
+
+See **[NOTICE](NOTICE.md)**.
+
+## Explore the project
+
+- **[Status & Roadmap](docs/STATUS_AND_ROADMAP.md)** — where the project actually stands.
+- **[Architecture](docs/ARCHITECTURE.md)** — public system model and trust boundaries.
+- **[Design Principles](docs/DESIGN_PRINCIPLES.md)** — rules KORA is being designed around.
+- **[FAQ](docs/FAQ.md)** — direct answers to common technical and diligence questions.
+- **[Collaborate](COLLABORATE.md)** — technical co-founder and contributor paths.
+- **[Investor / Partner Brief](INVESTORS_AND_PARTNERS.md)** — current thesis, stage and capital use.
+- **[Contributing](CONTRIBUTING.md)** — what is useful to contribute to this public surface.
+- **[Security](SECURITY.md)** — responsible disclosure guidance.
+
+## Who we are looking for
+
+Highest priority:
+
+- a **technical co-founder / lead engineer** with strong backend/systems judgment;
+- AI/backend engineers interested in orchestration, durable state and evaluations;
+- reliability/security collaborators interested in permissions, sandboxing and recovery;
+- product/UX collaborators focused on making complex AI operations feel simple;
+- mentors, pilot partners and pre-seed investors who understand that this is still an evidence-building stage.
 
 ## Founder
 
@@ -62,10 +150,8 @@ See [Collaborate](COLLABORATE.md) and [Investor / Partner Brief](INVESTORS_AND_P
 GitHub: `@vcheeko`  
 LinkedIn: `miha-tavcar-773502101`
 
-Miha's role is product vision, systems thinking, workflow/governance design, AI-assisted prototyping, testing and project direction. He is **not presented as a senior software engineer**; one purpose of this public collaboration effort is to build a technically strong founding/collaboration team around the project.
+Miha's role is product vision, systems thinking, workflow/governance design, AI-assisted prototyping, testing and project direction. He is **not presented as a senior software engineer**; KORA is intentionally seeking stronger software-engineering leadership around the project.
 
-## Important note
+---
 
-This public repository is intentionally a **showcase and collaboration surface**, not the canonical private engineering repository. It does not publish private source code, credentials, internal evidence chains, sensitive operational details or security boundaries.
-
-Unless explicitly licensed otherwise, publication here does **not** grant permission to copy or commercialize private KORA implementation or project IP. See [NOTICE](NOTICE.md).
+**KORA is early. The ambition is large; the current claims are intentionally narrow. Evidence comes before scale.**
