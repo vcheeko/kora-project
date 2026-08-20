@@ -126,14 +126,32 @@ People or teams with a real multi-step workflow where reliability, handoffs, rep
 
 We are open to **pre-seed investors and accelerators**, but the near-term goal is evidence, not fundraising theater.
 
+#### Indicative next-stage capital plan
+
+A current planning range for a focused next stage is approximately **€250k–€500k**, depending on team structure, partner involvement and the pace of the build. This is an **indicative planning range, not a formal investment offer**.
+
+The purpose of that capital would be to fund roughly **12–18 months of evidence-building work** around a deliberately narrow objective: build the minimal KORA Core, put it into a controlled real-world pilot and determine whether the product thesis is strong enough to justify broader productization.
+
 Early capital would primarily fund:
 
-- technical leadership and engineering capacity;
+- technical co-founder / lead engineering capacity;
+- backend and AI systems development;
 - minimal KORA Core implementation;
-- secure execution / sandbox work;
-- evaluation and test harnesses;
-- pilot integrations;
-- product UX and user research.
+- secure execution / sandbox and evaluation infrastructure;
+- testing, observability and verification tooling;
+- product UX and interface work;
+- pilot implementation and user research;
+- essential early legal and operational setup.
+
+#### What that capital should unlock
+
+The target outcome is not a large organization or premature scale. It is evidence:
+
+1. a working persistent KORA Core;
+2. one complete governed execution loop across sessions;
+3. a controlled real-project pilot;
+4. measurable comparison against a simpler AI-assistant + manual-tool baseline;
+5. enough technical and user evidence to decide whether KORA should scale, change direction or stop.
 
 ## What we are not asking an investor to believe yet
 
